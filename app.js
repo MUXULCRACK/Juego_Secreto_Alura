@@ -1,7 +1,7 @@
 let numeroSecreto = 0;
 let intentos = 0;
 let listaNumerosSorteados = [];
-let numeroMaximo = 2;
+let numeroMaximo = 100;
 let cantidadJuegos = prompt(`¿Cuántos juegos de ${numeroMaximo} números quieres jugar?`);
 
 
@@ -45,8 +45,7 @@ function limpiarCaja() {
 function generarNumeroSecreto() {
     let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
     let n = 1;
-    console.log(numeroGenerado);
-    console.log(listaNumerosSorteados);
+   
     //Si ya sorteamos todos los números
     if(listaNumerosSorteados.length == numeroMaximo ){
         if ( n <=cantidadJuegos-1 ) {
